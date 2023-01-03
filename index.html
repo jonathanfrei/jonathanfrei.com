@@ -19,17 +19,41 @@
 	header 	{font-size:80%;color:#b3b3b1;text-align:left;padding-top:1em}
 	footer  {font-size:80%;color:#b3b3b1;text-align:center;padding-top:1em}
 		@media only screen and (max-width: 600px) {body {font-size: 100%;padding:10px;}}
+		
+		/* ------- Sections ------- */
+
+section {
+  padding: calc(6em + 5vw) 5vw 8vw 5vw;
+  /* ! Everything below is needed ! */
+  display: none;
+  position: absolute;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bgcolor);
+}
+
+section:target { /* Show section */
+  display: block;
+}
+
+section#home { /* Show #home by default */
+  display: block;
+}
+		
 	</style>
 </head>
 <body>
 <header>
 <ul class="nav">
 <li><a href="/">Jonathan Frei</a></li>
-<li><a href="/">About</a></li>
+<li><a href="#about">About</a></li>
 <li><a href="/">Contact</a></li>
 
 </ul>
 </header>
+	      <section id="home"> <!-- HOME -->
+
 <h1>New homepage</h1>
 <p>Hello, my name is <a href="https://jonathanfrei.com">Jonathan Frei</a>. You can email me at 
 <a href="javascript:location='mailto:\u0068\u0069\u0040\u006a\u006f\u006e\u0061\u0074\u0068\u0061\u006e\u0066\u0072\u0065\u0069\u002e\u0063\u006f\u006d';void 0">hi [@] jonathan frei dot com</a>
@@ -37,6 +61,21 @@ or reach me on Twitter at <a href="https://twitter.com/jonathanfrei" target="_bl
 <p>For this new site, I just make the HTML files in Github, and push it out onto the internet. Everything can fit into a single file. 
 I can link to whatever I want and add the images in line or through hot linking as needed.</p>
 <p>Is this a better way to work on the web? Probably not, but it is fun. It's like driving a stick shift...getting you closer to the metal.</p>
+		      
+	</section>
+	
+	  <section id="about"> <!-- ABOUT -->
+        
+        <p>This is the about page. <a href="#another-page">This is a link to another page</a>.</p>
+        
+        <figure> 
+          <a href="#img-about">         
+            <img loading="lazy" alt="" src="//dummyimage.com/1200x600/ddd/bbb" width="1200" height="600">
+          </a>
+          <figcaption>Example of an image with a link to a larger version.</figcaption>
+        </figure>
+        
+      </section>
 <footer>
 Copyright © 2022 Jonathan Frei
 </footer>

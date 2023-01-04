@@ -2,9 +2,9 @@
   
     /* Color scheme */
     
-    --textcolor: #121212;
+    --textcolor: #000;
     --bgcolor: #fff;
-    --highlight: #2749c9;
+    --highlight: #09c;
   
   }
   
@@ -18,7 +18,7 @@
   
   body {
     font-size: 18px;
-    font-family: system-ui, sans-serif;
+    font-family: avenir,'Segoe UI',sans-serif;
     line-height: 1.4;
     color: var(--textcolor);
     background: var(--bgcolor);
